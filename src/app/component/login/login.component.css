@@ -1,0 +1,22 @@
+.container {
+    width: 400px;
+    height: 620px;
+    background-color: darkgrey;
+    margin-top: 50px;
+
+}
+
+.sign {
+    text-align: center;
+    color: blue;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+
+
+.cn {
+    color: red;
+}

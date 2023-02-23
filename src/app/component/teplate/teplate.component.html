@@ -1,0 +1,28 @@
+ <form  #logiForm="ngForm" (ngSubmit)="submit(logiForm)"> 
+    
+    <div class="show">
+        <label> UserName:</label>
+       
+        <input required minlength="4"type="text" class="form-control  w-50 m-2"
+         ngModel name="uname" 
+         #un="ngModel">
+         <ng-container *ngIf="un.touched">
+            <p class="err" *ngIf="un.errors?.['required']">user name required</p>
+            <p class="err" *ngIf="un.errors?.['minlength']">user name contains min 3 ch</p>
+         </ng-container>
+         
+        <label>password:</label>
+        <input required min length="8"  type="password" class="form-control  w-50 m-2" 
+        ngModel name="pwd" 
+        #p="ngModel">
+        <ng-container *ngIf="p.touched">
+            <p class="err" *ngIf="p.errors?.['required']">user name required</p>
+            <p class="err" *ngIf="p.errors?.['minlength']">user name contains min 8 ch</p>
+         </ng-container>
+         
+
+        <button  class="btn btn-primary">submit</button>
+        
+</div>
+   
+</form>

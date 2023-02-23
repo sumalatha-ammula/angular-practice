@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstname": "suma",
+      "lastName": "ammula",
+      "email": "suma@gmail.com",
+      "Mobile": "98653456",
+      "salary": "50,000"
+    },
+    {
+      "id": 2,
+      "firstname": "ftfcvft",
+      "lastName": "hgfgvbghsxcfgd",
+      "email": "hgghb @gmail.com",
+      "Mobile": "123456789",
+      "salary": "98786765434"
+    },
+    {
+      "id": 3,
+      "firstname": "jhghbhujb",
+      "lastName": "khbbnnjn",
+      "email": "kjjhnjkh@gmail.com",
+      "Mobile": "8754322",
+      "salary": "089675423"
+    },
+    {
+      "id": 4,
+      "lastName": "kjmio",
+      "email": "kljomko@gmai.com",
+      "Mobile": "908765",
+      "salary": "7654322354667"
+    },
+    {
+      "id": 5,
+      "firstname": "jhhgghnhhn",
+      "lastName": " nbbnn hj",
+      "email": "hhn nj@gmail.com",
+      "Mobile": "09876534",
+      "salary": "78897644"
+    },
+    {
+      "id": 6,
+      "firstname": "gfgthyn",
+      "lastName": "",
+      "email": "",
+      "Mobile": "",
+      "salary": ""
+    },
+    {
+      "id": 7,
+      "firstname": "suma",
+      "lastName": "",
+      "email": "",
+      "Mobile": "",
+      "salary": ""
+    },
+    {
+      "id": 8,
+      "firstname": "sruthi",
+      "lastName": "bezgam",
+      "email": "bezgam@gmail.com",
+      "Mobile": "9989463452",
+      "salary": "90000000"
+    },
+    {
+      "id": 9,
+      "firstname": "dsfsfs",
+      "lastName": "sdfsdfs",
+      "email": "",
+      "Mobile": "",
+      "salary": ""
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

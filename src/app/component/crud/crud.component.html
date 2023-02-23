@@ -1,0 +1,81 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2 class="text-white">Angular Crud</h2>
+<div class="d-flex  ">
+    
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button>
+</div>
+    </div>
+</nav>
+<table class="table">
+    <thead>
+    <tr>
+        <th class="col">Employee Id</th>
+        <th class="col">First Name</th>
+        <th class="col">Last Name</th>
+        <th class="col">Email Id</th>
+        <th class="col">Mobile No:</th>
+        <th class="col">Salary</th>
+        <th class ="col">Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let i of employeeData">
+        <td>{{i.id}}</td>
+        <td>{{i.firstname}}</td>
+        <td>{{i.lastName}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.Mobile}}</td>
+        <td>{{i.salary}}</td>
+      
+        <td >
+            <button class="btn btn-info" (click)="onEdit(i)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+            <button  (click)="deleteemployee(i)" class="btn btn-danger mx-3">delete</button>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="firstname">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" formControlName="LastName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email Id</label>
+                    <input type="Email" class="form-control" id="exampleInputPassword1"formControlName="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mobile No</label>
+                    <input type="" class="form-control" id="exampleInputPassword1"formControlName="MobileNo">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">salary</label>
+                    <input type="" class="form-control" id="exampleInputPassword1" formControlName="salary">
+                  </div>
+                
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+          <button type="button" class="btn btn-primary" (click)="postEmployeeDetails()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>

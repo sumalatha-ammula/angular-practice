@@ -1,0 +1,18 @@
+.show{
+    margin-left: 220px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.form:hover{
+color: red;
+}
+.err{
+    color: red;
+}
+input.ng-touched.ng-invalid{
+border:2px solid red
+}
+input.ng-touched.ng-valid{
+    border:2px solid green
+}

@@ -1,0 +1,134 @@
+<div class="total">
+  <form [formGroup]="regForm" (ngSubmit)="regForm.valid && onSubmit()">
+    <div class="container d-flex">
+      <div class="row">
+        <div class="col-12">
+          <div class="card-header bg-primary text-white text-center">
+            Registration Form
+          </div>
+          <div class="card-body">
+            <div>
+              <label for="" class="form-label">FirstName</label>
+              <input
+                required
+                type="text"
+                class="form-control"
+                formControlName="FirstName"
+                [ngClass]="{
+                  'is-invalid':
+                    regForm.get('FirstName').touched &&
+                    regForm.get('FirstName').invalid
+                }"
+              />
+              <div class="invalid-feedback">
+                <div>Plaese Enter First Name</div>
+              </div>
+            </div>
+            <div>
+              <label for="" class="form-label">LastName</label>
+              <input
+                required
+                type="text"
+                class="form-control"
+                formControlName="LastName"
+                [ngClass]="{
+                  'is-invalid':
+                    regForm.get('LastName').touched &&
+                    regForm.get('LastName').invalid
+                }"
+              />
+              <div class="invalid-feedback">
+                <div>Please Enter Last Name</div>
+              </div>
+            </div>
+            <div>
+              <label for="" class="form-label">Email</label>
+              <input
+                required
+                type="text"
+                class="form-control"
+                formControlName="Email"
+                [ngClass]="{
+                  'is-invalid':
+                    regForm.get('Email').touched && regForm.get('Email').invalid
+                }"
+              />
+              <div class="invalid-feedback">
+                <div>please Enter Email</div>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">password</label>
+              <input
+                required
+                type="password"
+                class="form-control"
+                formControlName="password"
+                [ngClass]="{
+                  'is-invalid':
+                    regForm.get('password').touched &&
+                    regForm.get('password').invalid
+                }"
+              />
+              <div class="invalid-feedback">
+                <div>please Enter Valid Password</div>
+              </div>
+            </div>
+            <div>
+              <label for="" class="form-label">confirm password</label>
+              <input
+                required
+                type="text"
+                class="form-control"
+                formControlName="conpassword"
+                [ngClass]="{
+                  'is-invalid':
+                    regForm.get('conpassword').touched &&
+                    regForm.get('conpassword').invalid
+                }"
+              />
+              <div  class="invalid-feedback">
+                <div>Password doesn't match</div>
+              </div>
+            </div>
+            <div formArrayName="skills">
+              <h4>Skills</h4>
+              <button
+                type="button"
+                class="btn btn-primary mt-3"
+                (click)="addSkills()"
+                type="button"
+              >
+                Add Skills
+              </button>
+              <div
+                *ngFor="let s of skills.controls; let i = index"
+                class="row g-3"
+              >
+                <div class="col-2">skills</div>
+                <div class="col">
+                  <input
+                    name="skill-{{ i }}"
+                    type="text"
+                    [formControlName]="i"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary m-2" [disabled]="!regForm.valid">
+              Register
+            </button>
+            <!-- <button class="btn btn-primary m-2" (click)="setValue()">
+              setvalue
+            </button> -->
+            <button class="btn btn-primary m-2" (click)="patchValue()">
+              patchvalue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
